@@ -178,15 +178,8 @@ class SlackBot extends Adapter
   ###
   close: =>
     @robot.logger.info "Disconnected from Slack RTM"
-    # NOTE: not confident that @options.autoReconnect works
-    if @options.autoReconnect
-      @robot.logger.info "Waiting for reconnect..."
-    else
-      @robot.logger.info "Exiting..."
-      @client.disconnect()
-      # NOTE: Node recommends not to call process.exit() but Hubot itself uses this mechanism for shutting down
-      # Can we make sure the brain is flushed to persistence? Do we need to cleanup any state (or timestamp anything)?
-      process.exit 1
+    process.exit 1 
+
 
   ###*
   # Slack client received an error
