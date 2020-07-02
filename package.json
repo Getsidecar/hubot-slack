@@ -5,7 +5,6 @@
   "main": "./slack",
   "scripts": {
     "test": "npm run mocha && istanbul report text-summary lcov",
-    "codecov": "codecov",
     "mocha": "mocha --compilers coffee:coffeescript/register --require coffee-coverage/register-istanbul --reporter spec test"
   },
   "keywords": [
@@ -35,7 +34,6 @@
     "chai": "^3.5.0",
     "coffee-coverage": "^2.0.0",
     "coffeescript": "^1.12.7",
-    "codecov": "^2.3.1",
     "hubot": ">= 2.19.0",
     "istanbul": "^0.4.3",
     "mocha": "^3.5.3",
