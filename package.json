@@ -1,8 +1,11 @@
 {
-  "name": "hubot-sidecarslack",
-  "version": "4.5.8",
+  "name": "@getsidecar/hubot-sidecarslack",
+  "version": "4.6.0",
   "description": "A Slack adapter for hubot",
   "main": "./slack",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "scripts": {
     "test": "npm run mocha && istanbul report text-summary lcov",
     "mocha": "mocha --compilers coffee:coffeescript/register --require coffee-coverage/register-istanbul --reporter spec test"
@@ -13,15 +16,8 @@
     "adapter",
     "slack"
   ],
-  "author": "Slack Technologies, Inc.",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "http://github.com/slackapi/hubot-slack.git"
-  },
-  "bugs": {
-    "url": "https://github.com/slackapi/hubot-slack/issues"
-  },
+  "repository": "git://github.com/Getsidecar/hubot-slack.git",
   "dependencies": {
     "@slack/client": "3.16.1-sec.2",
     "bluebird": "^3.5.1",
